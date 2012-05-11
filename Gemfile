@@ -16,13 +16,15 @@ group :assets do
 end
 group :test do
 	gem "email_spec", ">= 1.2.1"
-	gem "cucumber-rails", ">= 1.3.0"
+	gem "cucumber-rails", ">= 1.3.0", require: false
 	gem "capybara", ">= 1.1.2"
 	gem "database_cleaner", ">= 0.7.2"
 	gem "launchy", ">= 2.1.0"
+	gem 'spork'
 end
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 
 gem 'jquery-rails'
