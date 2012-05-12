@@ -13,7 +13,7 @@ When /^I visit the home page$/ do
     visit root_path
 end
 
-Then /^I should see a button "([^\"]*)"$/ do |arg1|
+Then /^I should see a button "([^"]*)"$/ do |arg1|
   page.should have_button (arg1)
 end
 
@@ -25,7 +25,7 @@ Then /^I should see a form with a field "([^"]*)"$/ do |arg1|
   page.should have_content (arg1)
 end
 
-Then /^I should see a message "([^\"]*)"$/ do |arg1|
+Then /^I should see a message "([^"]*)"$/ do |arg1|
   page.should have_content (arg1)
 end
 
@@ -41,6 +41,10 @@ end
 
 When /^I request an invitation with valid user data$/ do
   invitation_request new_user
+end
+
+Given /^"([^"]*)" request an invitation$/ do |email|
+  invitation_request email: email
 end
 
 When /^I request an invitation with an invalid email$/ do

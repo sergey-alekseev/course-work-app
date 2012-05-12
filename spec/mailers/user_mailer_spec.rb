@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe UserMailer do
-  before(:all) do
+  before(:each) do
     @user = FactoryGirl.create(:user, email: "example@example.com")
     @email = UserMailer.welcome_email(@user).deliver
   end
