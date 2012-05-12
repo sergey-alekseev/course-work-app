@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsPrelaunchSignup::Application.load_tasks
+CourseWorkApp::Application.load_tasks
